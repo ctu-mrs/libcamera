@@ -2,5 +2,5 @@
 
 [wrap-git]
 url = https://github.com/ctu-mrs/libpisp.git
-revision = build_fix
+revision = v1.0.6_build_fix
 depth = 1
