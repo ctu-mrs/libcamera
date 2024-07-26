@@ -28,7 +28,7 @@ v4l2_compat_cpp_args = [
     '-fvisibility=hidden',
 ]
 
-v4l2_compat = static_library('v4l2-compat',
+v4l2_compat = shared_library('v4l2-compat',
                              v4l2_compat_sources,
                              name_prefix : '',
                              install : true,
