@@ -190,10 +190,10 @@ libcamera_deps += [
 # runtime if the library is running from an installed location by checking
 # for the presence or abscence of the dynamic tag.
 
-libcamera = shared_library('libcamera',
+libcamera = static_library('libcamera',
                            libcamera_sources,
-                           version : libcamera_version,
-                           soversion : libcamera_soversion,
+                           # version : libcamera_version,
+                           # soversion : libcamera_soversion,
                            name_prefix : '',
                            install : true,
                            include_directories : includes,

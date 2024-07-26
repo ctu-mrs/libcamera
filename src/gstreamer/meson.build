@@ -39,7 +39,7 @@ if cc.get_id() == 'clang' and glib_dep.version().version_compare('<2.63.0')
     libcamera_gst_cpp_args += ['-Wno-unused-function']
 endif
 
-libcamera_gst = shared_library('gstlibcamera',
+libcamera_gst = static_library('gstlibcamera',
     libcamera_gst_sources,
     cpp_args : libcamera_gst_cpp_args,
     dependencies : [libcamera_public, gstvideo_dep, gstallocator_dep],

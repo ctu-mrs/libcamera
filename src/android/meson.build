@@ -65,7 +65,7 @@ android_camera_metadata = static_library('camera_metadata',
                                          c_args : '-Wno-shadow',
                                          include_directories : android_includes)
 
-libcamera_hal = shared_library('libcamera-hal',
+libcamera_hal = static_library('libcamera-hal',
                                android_hal_sources,
                                name_prefix : '',
                                link_with : android_camera_metadata,
