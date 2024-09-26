@@ -1167,7 +1167,7 @@ int Camera::configure(CameraConfiguration *config)
 	for (auto it : *config)
 		it.setStream(nullptr);
 
-	if (config->validate() != CameraConfiguration::Valid) {
+	if (config->validate() == CameraConfiguration::Invalid) {
 		LOG(Camera, Error)
 			<< "Can't configure camera with invalid configuration";
 		return -EINVAL;
