@@ -1799,9 +1799,9 @@ int PiSPCameraData::configureCfe()
   }
   /* downscale.pad = global.pad; */
 
-  downscale.xin = 1;
+  downscale.xin = 2;
   downscale.xout = 1;
-  downscale.yin = 1;
+  downscale.yin = 2;
   downscale.yout = 1;
 
   fe_->SetDownscale(0, downscale);
