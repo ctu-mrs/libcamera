@@ -1797,7 +1797,7 @@ int PiSPCameraData::configureCfe()
   else {
     downscale.flags = DOWNSCALE_BAYER;
   }
-  downscale.pad = global.pad;
+  /* downscale.pad = global.pad; */
 
   downscale.xin = 1;
   downscale.xout = 1;
