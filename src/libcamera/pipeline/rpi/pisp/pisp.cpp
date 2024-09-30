@@ -1789,6 +1789,23 @@ int PiSPCameraData::configureCfe()
 	global.enables |= PISP_FE_ENABLE_OUTPUT0;
 	global.bayer_order = toPiSPBayerOrder(cfeFormat.fourcc);
 
+  pisp_fe_downscale_config downscale;
+
+  if (global.bayer_order == BayerFormat::Order::MONO){
+    downscale.flags = DOWNSCALE_BIN;
+  }
+  else {
+    downscale.flags = DOWNSCALE_BAYER;
+  }
+  downscale.pad = global.pad;
+
+  downscale.xin = 1;
+  downscale.xout = 1;
+  downscale.yin = 1;
+  downscale.yout = 1;
+
+  fe_->SetDownscale(0, downscale);
+
 	pisp_image_format_config image = toPiSPImageFormat(cfeFormat);
 	pisp_fe_input_config input = {};
 
