@@ -987,7 +987,7 @@ void IpaPiSP::setStatsAndDebin()
 	pisp_be_global_config beGlobal;
 	be_->GetGlobal(beGlobal);
 
-	if (mode_.binX > 1 || mode_.binY > 1) {
+	if ((!monoSensor_) && (mode_.binX > 1 || mode_.binY > 1)) {
 		pisp_be_debin_config debin;
 
 		be_->GetDebin(debin);
