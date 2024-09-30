@@ -1791,7 +1791,7 @@ int PiSPCameraData::configureCfe()
 
   pisp_fe_downscale_config downscale;
 
-  if (global.bayer_order == BayerFormat::Order::MONO){
+  if (global.bayer_order == PISP_BAYER_ORDER_GREYSCALE){
     downscale.flags = DOWNSCALE_BIN;
   }
   else {
