@@ -346,7 +346,8 @@ std::shared_ptr<Camera> CameraManager::get(const std::string &id)
 	MutexLocker locker(d->mutex_);
 
 	for (std::shared_ptr<Camera> camera : d->cameras_) {
-    ROS_INFO_STREAM("[" << ros::this_node::getName().c_str() << "]: Camera name:  "  << camera->id());
+    
+	LOG(Camera, Debug) << "Camera name:  "  << camera->id();
 		if (camera->id() == id)
 			return camera;
 	}
