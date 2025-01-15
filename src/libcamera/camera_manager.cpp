@@ -348,6 +348,7 @@ std::shared_ptr<Camera> CameraManager::get(const std::string &id)
 	for (std::shared_ptr<Camera> camera : d->cameras_) {
     
 	LOG(Camera, Debug) << "Camera name:  "  << camera->id();
+  std::cout << "Camera name: " << camera->id() << std::endl;
 		if (camera->id() == id)
 			return camera;
 	}
