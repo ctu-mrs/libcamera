@@ -114,9 +114,9 @@ ProcessManager *ProcessManager::self_ = nullptr;
  */
 ProcessManager::ProcessManager()
 {
-	if (self_)
-		LOG(Process, Fatal)
-			<< "Multiple ProcessManager objects are not allowed";
+	/* if (self_) */
+	/* 	LOG(Process, Fatal) */
+	/* 		<< "Multiple ProcessManager objects are not allowed"; */
 
 	sigaction(SIGCHLD, NULL, &oldsa_);
 

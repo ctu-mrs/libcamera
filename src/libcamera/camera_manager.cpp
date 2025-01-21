@@ -250,9 +250,9 @@ CameraManager *CameraManager::self_ = nullptr;
 CameraManager::CameraManager()
 	: Extensible(std::make_unique<CameraManager::Private>())
 {
-	if (self_)
-		LOG(Camera, Fatal)
-			<< "Multiple CameraManager objects are not allowed";
+	/* if (self_) */
+	/* 	LOG(Camera, Fatal) */
+	/* 		<< "Multiple CameraManager objects are not allowed"; */
 
 	self_ = this;
 }
