@@ -105,9 +105,9 @@ IPAManager *IPAManager::self_ = nullptr;
  */
 IPAManager::IPAManager()
 {
-	if (self_)
-		LOG(IPAManager, Fatal)
-			<< "Multiple IPAManager objects are not allowed";
+	/* if (self_) */
+	/* 	LOG(IPAManager, Fatal) */
+	/* 		<< "Multiple IPAManager objects are not allowed"; */
 
 #if HAVE_IPA_PUBKEY
 	if (!pubKey_.isValid())
